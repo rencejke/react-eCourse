@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Poppins-Black";
+    src: url(/fonts/Poppins-Black.woff) format("woff"),
+    url(/fonts/Poppins-Black.woff2) format("woff2");
+  
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: url(/fonts/Poppins-Regular.woff) format("woff"),
+    url(/fonts/Poppins-Regular.woff2) format("woff2");
+  
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url(/fonts/Poppins-Bold.woff) format("woff"),
+    url(/fonts/Poppins-Bold.woff2) format("woff2");
+  
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Poppins-Medium";
+    src: url(/fonts/Poppins-Medium.woff) format("woff"),
+    url(/fonts/Poppins-Medium.woff2) format("woff2");
+  
+    font-display: swap;
+  }
+
+@layer base{
+  
+  body
+  {
+    @apply font-[Poppins-Regular] bg-[#121212] text-white
+  }
+
+  h1,h2,h3,h4,h5
+  {
+    @apply font-[Poppins-Medium]
+  }
+
+  .container
+  {
+    @apply max-w-[1400px] w-full mx-auto px-1.5 py-6
+  }
+
+}
+@layer components{
+   
+  .btn
+  {
+    @apply bg-[#7f39fb] rounded-full py-2 px-7
+  }
+
+  .btn--transparent
+  {
+    @apply bg-transparent border-2 border-[#7f39fb] rounded-full py-2 px-7
+  }
+
+  .count-item 
+  {
+    @apply flex text-[35px] text-[#7e38f8] justify-center
+  }
+
+}
+@layer utilities{
+}
