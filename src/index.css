@@ -39,7 +39,7 @@
   
   body
   {
-    @apply font-[Poppins-Regular] bg-[#121212] text-white
+    @apply font-[Poppins-Regular] bg-[#121212] text-white overflow-x-hidden
   }
 
   h1,h2,h3,h4,h5
@@ -49,11 +49,15 @@
 
   .container
   {
-    @apply max-w-[1400px] w-full mx-auto px-1.5 py-6
+    @apply max-w-[1400px] w-full mx-auto md:px-1.5 xs:px-8 py-6
   }
 
 }
 @layer components{
+
+  nav.show{
+    @apply max-h-[400px]
+  }
    
   .btn
   {
@@ -67,7 +71,47 @@
 
   .count-item 
   {
-    @apply flex text-[35px] text-[#7e38f8] justify-center
+    @apply flex md:text-[35px] xs:text-[18px] text-[#7e38f8] justify-center  
+  }
+
+  .courses h3::before
+  {
+    @apply content-[''] absolute block xs:w-[25%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] left-0
+  }
+
+  .courses h3::after
+  {
+    @apply content-[''] absolute block xs:w-[25%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] right-0
+  }
+
+  .teach h3::before
+  {
+    @apply content-[''] absolute block xs:w-[15%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] left-0
+  }
+
+  .teach h3::after
+  {
+    @apply content-[''] absolute block xs:w-[15%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] right-0
+  }
+
+  .whyUs h3::before
+  {
+    @apply content-[''] absolute block xs:w-[25%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] left-0
+  }
+
+  .whyUs h3::after
+  {
+    @apply content-[''] absolute block xs:w-[25%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] right-0
+  }
+
+  .receiveUpdates h3::before
+  {
+    @apply content-[''] absolute block xs:w-[15%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] left-0
+  }
+
+  .receiveUpdates h3::after
+  {
+    @apply content-[''] absolute block xs:w-[15%] md:w-[38%] h-[2px] bg-[#ffff]/20 top-[50%] right-0
   }
 
 }
