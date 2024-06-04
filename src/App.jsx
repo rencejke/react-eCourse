@@ -1,17 +1,29 @@
 // src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {Routes, Route, useLocation } from "react-router-dom";
 import Home from "./components/pages/Home";
+import Courses from "./components/pages/Courses";
+import Teach from "./components/pages/Teach";
+import WhyUs from "./components/pages/WhyUs";
+import ReceiveUpdates from "./components/pages/ReceiveUpdates";
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
         {/* Page Example **/}
         <Route path="/" element={<Home />} />
-        {/* Not Found Page Uses **/}
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/teach" element={<Teach />} />
+        <Route path="/whyUs" element={<WhyUs />} />
+        <Route path="/receiveUpdates" element={<ReceiveUpdates />} />
+
         <Route path="*" element={<h2>Not Found</h2>} />
       </Routes>
-    </Router>
+      </AnimatePresence>
+      
   );
 }
 export default App;

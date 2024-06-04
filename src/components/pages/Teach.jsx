@@ -1,14 +1,31 @@
 import React from 'react'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import Header from '../partials/Header'
+import Footer from '../partials/Footer'
+import Transition from '../partials/Transition'
+import { motion } from 'framer-motion'
 
 const Teach = () => {
   return (
-   <section className='teach mt-12'>
+   <>
+   <Header/>
+     <section className='teach mt-12 mb-6'>
     <div className="container">
-        <h3 className='text-center md:text-[35px] xs:text-[28px] relative'>What We Teach</h3>
+        <motion.h3 className='text-center md:text-[35px] xs:text-[28px] relative'
+         initial={{ opacity:0, y:20 }}
+         animate={{ opacity:1, y:0 }}
+         transition={{delay: 0.3 }}
+        
+        >What We Teach</motion.h3>
         <div className="wrapper md:flex md:justify-between md:gap-10 mt-12 xs:grid xs:grid-cols-1 xs:gap-5">
-            <div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md">
+         
+         
+            <motion.div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md"
+              initial={{ opacity:0, y:20 }}
+              animate={{ opacity:1, y:0 }}
+              transition={{delay: 0.5 }}
+            >
             <img src="https://via.placeholder.com/170x170" alt="" className='mx-auto'/>
             <h4 className='text-center py-3 uppercase'>Programming</h4>
             <p className='text-[12px] px-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod repudiandae et. Aspernatur fuga iure facilis? Autem vitae architecto quibusdam!</p>
@@ -19,10 +36,13 @@ const Teach = () => {
                 <MdKeyboardArrowRight />
                 </div>
              </div>
-            </div>
+            </motion.div>
 
-
-            <div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md">
+            <motion.div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md"
+              initial={{ opacity:0, y:20 }}
+              animate={{ opacity:1, y:0 }}
+              transition={{delay: 1 }}
+            >
             <img src="https://via.placeholder.com/170x170" alt="" className='mx-auto'/>
             <h4 className='text-center py-3 uppercase'>Programming</h4>
             <p className='text-[12px] px-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod repudiandae et. Aspernatur fuga iure facilis? Autem vitae architecto quibusdam!</p>
@@ -33,9 +53,13 @@ const Teach = () => {
                 <MdKeyboardArrowRight />
                 </div>
              </div>
-            </div>
+            </motion.div>
 
-            <div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md">
+            <motion.div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md"
+              initial={{ opacity:0, y:20 }}
+              animate={{ opacity:1, y:0 }}
+              transition={{delay: 1.5 }}
+            >
             <img src="https://via.placeholder.com/170x170" alt="" className='mx-auto'/>
             <h4 className='text-center py-3 uppercase'>Programming</h4>
             <p className='text-[12px] px-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod repudiandae et. Aspernatur fuga iure facilis? Autem vitae architecto quibusdam!</p>
@@ -46,9 +70,13 @@ const Teach = () => {
                 <MdKeyboardArrowRight />
                 </div>
              </div>
-            </div>
+            </motion.div>
 
-            <div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md">
+            <motion.div className="teach_card bg-[#1c1c1c] h-[380px] md:w-[400px] xs:w-[330px] p-5 rounded-md"
+              initial={{ opacity:0, y:20 }}
+              animate={{ opacity:1, y:0 }}
+              transition={{delay: 2 }}
+            >
             <img src="https://via.placeholder.com/170x170" alt="" className='mx-auto'/>
             <h4 className='text-center py-3 uppercase'>Programming</h4>
             <p className='text-[12px] px-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod repudiandae et. Aspernatur fuga iure facilis? Autem vitae architecto quibusdam!</p>
@@ -59,13 +87,18 @@ const Teach = () => {
                 <MdKeyboardArrowRight />
                 </div>
              </div>
-            </div>
+            </motion.div>
+
+
+          
          
         </div>
     </div>
     
    </section>
+   <Footer/>
+   </>
   )
 }
 
-export default Teach
+export default  Transition(Teach)
